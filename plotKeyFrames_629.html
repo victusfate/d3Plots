@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Time Key Frame Plot</title>
+  <script type="text/javascript" src="http://mbostock.github.com/d3/d3.js"></script>
+  <script type="text/javascript" src="js/plotKeyFrames.js"></script>
+  <style type="text/css">
+       svg {
+         shape-rendering: crispEdges;
+        }
+       #stackedbudget-chart line {
+         stroke: #000;
+       }
+       .rule line {
+         stroke: #eee;
+       }
+      #keyframe-chart {
+         float: left;
+       }
+      .BIG {
+         font-size: 250%;
+       }
+  </style>
+</head>
+<body>
+  <center><h3><a name="s1">Keyframe Chart</a></h3></center>
+  <div id="keyframe-chart">
+    <script type="text/javascript">  
+      var itemStates = [[{"iType":"Dynamic.Script.Subscript","start":0,"end":96},{"iType":"Dynamic.Script.Group","start":96,"end":336},{"iType":"Dynamic.Script.Group","start":335,"end":575},{"iType":"Dynamic.Script.Subscript","start":575,"end":635},{"iType":"Dynamic.Script.Subscript","start":635,"end":719},{"iType":"Dynamic.Script.Subscript","start":719,"end":774}],[{"iType":"Dynamic.Montage.Title","start":4,"end":95},{"iType":"Dynamic.Post.Media.Video","start":96,"end":336},{"iType":"Dynamic.Post.Caption","start":132,"end":228},{"iType":"Dynamic.Post.Media.Video","start":335,"end":575},{"iType":"Dynamic.Post.Caption","start":371,"end":467},{"iType":"Dynamic.User.Name.Display","start":883,"end":931},{"iType":"Dynamic.Montage.Soundtrack.Album","start":888,"end":948},{"iType":"Dynamic.Montage.Soundtrack.Artist","start":888,"end":948},{"iType":"Dynamic.Montage.Soundtrack.Title","start":888,"end":948},{"iType":"Static.Media","start":1564,"end":1619}],[{"iType":"Dynamic.Montage.Title","start":0,"end":91},{"iType":"Dynamic.Post.Media.Video","start":92,"end":332},{"iType":"Dynamic.Post.Caption","start":128,"end":224},{"iType":"Dynamic.Post.Media.Video","start":331,"end":571},{"iType":"Dynamic.Post.Caption","start":367,"end":463},{"iType":"Dynamic.User.Name.Display","start":572,"end":620},{"iType":"Dynamic.Montage.Soundtrack.Album","start":577,"end":637},{"iType":"Dynamic.Montage.Soundtrack.Artist","start":577,"end":637},{"iType":"Dynamic.Montage.Soundtrack.Title","start":577,"end":637},{"iType":"Static.Media","start":638,"end":693}],[{"iType":"Dynamic.Montage.Title","start":0,"end":91},{"iType":"Dynamic.Post.Media.Video","start":92,"end":281},{"iType":"Dynamic.Post.Caption","start":123,"end":206},{"iType":"Dynamic.Post.Media.Video","start":266,"end":393},{"iType":"Dynamic.Post.Caption","start":297,"end":343},{"iType":"Dynamic.User.Name.Display","start":394,"end":442},{"iType":"Dynamic.Montage.Soundtrack.Album","start":399,"end":459},{"iType":"Dynamic.Montage.Soundtrack.Artist","start":399,"end":459},{"iType":"Dynamic.Montage.Soundtrack.Title","start":399,"end":459},{"iType":"Static.Media","start":460,"end":515}]];
+
+      var stateTitles = ["Raw Script File","Flattened Script","Gap Fixed Script","Duration Adjusted Script"];
+
+      plotKeyFrames(itemStates,0,1619,stateTitles);
+    </script>
+    <br/>
+  </div>
+</body>
+</html>
